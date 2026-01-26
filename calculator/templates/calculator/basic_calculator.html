@@ -3,20 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Calculator</title>
+    <title>Calculator</title>
 </head>
 <body>
-    <form>
-        {{% csrf_token %}}
-        <input type="text" name="a">
-        <select name="operator">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="number" name="num1" value={{request.POST.num1}}>
+        <select name="operation">
+            <option value="+" {% if request.POST.operation == "+" %} selected {% endif %}>+</option>
+            <option value="-" {% if request.POST.operation == "-" %} selected {% endif %}>-</option>
+            <option value="*" {% if request.POST.operation == "*" %} selected {% endif %}>*</option>
+            <option value="/" {% if request.POST.operation == "/" %} selected {% endif %}>/</option>
         </select>
-        <input type="text" name="b"><br>
-        <input type="submit">
+        <input type="number" name="num2" value={{request.POST.num2}}>
+        <input type="submit"><br>
+        <h1>Výsledok: {{ result }}</h1>
     </form>
     
 </body>

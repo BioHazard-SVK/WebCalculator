@@ -8,15 +8,16 @@
 <body>
     <form method="POST">
         {% csrf_token %}
-        <input type="number" name="num1" value={{request.POST.num1}}>
+        <button type="submit" name="action" value="m-plus">M+</button><br>
+        <input type="number" name="num1" value="{{request.POST.num1}}">
         <select name="operation">
             <option value="+" {% if request.POST.operation == "+" %} selected {% endif %}>+</option>
             <option value="-" {% if request.POST.operation == "-" %} selected {% endif %}>-</option>
             <option value="*" {% if request.POST.operation == "*" %} selected {% endif %}>*</option>
             <option value="/" {% if request.POST.operation == "/" %} selected {% endif %}>/</option>
         </select>
-        <input type="number" name="num2" value={{request.POST.num2}}>
-        <input type="submit"><br>
+        <input type="number" name="num2" value="{{request.POST.num2}}">
+        <Button type="submit">Vypočítať</Button><br>
         <h1>Výsledok: {{ result }}</h1>
     </form>
     

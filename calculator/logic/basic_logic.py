@@ -17,3 +17,9 @@ class BasicOperations:
     @staticmethod
     def division(a, b):
         return a / b
+    
+class MemoryOperations:
+
+    @staticmethod
+    def memory_plus(current_memory, add_memory_value):
+        return current_memory + add_memory_value

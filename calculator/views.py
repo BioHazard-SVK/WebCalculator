@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .logic.basic_logic import BasicOperations 
+from .logic.basic_logic import BasicOperations, MemoryOperations
 
 def basic_calculator(request):
     result = None
@@ -17,3 +17,7 @@ def basic_calculator(request):
         elif operation == '/':
             result = BasicOperations.division(num1, num2)
     return render(request, 'calculator/basic_calculator.html', {'result': result})
+
+def memory_operations(request):
+    current_memory = None
+    if request.method =="submit"

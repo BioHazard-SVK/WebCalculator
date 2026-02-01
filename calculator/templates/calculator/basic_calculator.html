@@ -1,25 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
+    <script defer src="{% static 'calculator/js/basic_operations.js' %}"></script>
+    <title>Web Calculator</title>
 </head>
 <body>
-    <form method="POST">
-        {% csrf_token %}
-        <button type="submit" name="action" value="m-plus">M+</button><br>
-        <input type="number" name="num1" value="{{request.POST.num1}}">
-        <select name="operation">
-            <option value="+" {% if request.POST.operation == "+" %} selected {% endif %}>+</option>
-            <option value="-" {% if request.POST.operation == "-" %} selected {% endif %}>-</option>
-            <option value="*" {% if request.POST.operation == "*" %} selected {% endif %}>*</option>
-            <option value="/" {% if request.POST.operation == "/" %} selected {% endif %}>/</option>
-        </select>
-        <input type="number" name="num2" value="{{request.POST.num2}}">
-        <Button type="submit">Vypočítať</Button><br>
-        <h1>Výsledok: {{ result }}</h1>
-    </form>
-    
+
+    <h1>Web calculator</h1>
+    <input type="text" id="number1" size="5" />
+    <select id="operations">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="number2" size="5" />
+    <button id="button">Výsledok</button>
+    <h2>Výsledok: <span id="result-text">0</span></h2>
+
 </body>
 </html>

@@ -18,6 +18,13 @@ def basic_calculator(request):
             result = BasicOperations.division(num1, num2)
     return render(request, 'calculator/basic_calculator.html', {'result': result})
 
-def memory_operations(request):
+def memory_operations(request, result):
     current_memory = None
-    if request.method =="submit"
+    if request.method == "SUBMIT":
+        result_to_memory = float(request.POST.get('result'))
+        action = request.POST.get('action')
+        
+        if action == "m-plus":
+            current_memory = MemoryOperations.memory_plus(current_memory, result_to_memory)
+    
+    return render(request, 'calculator/basic_calculator.html', {'current_memoru': current_memory })

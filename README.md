@@ -1,3 +1,4 @@
 ﻿# WebCalculator
- Program pre účely učenia sa v jazyku Python a frameworku Django
+ Program pre účely učenia sa v jazykoch Python a Javascript vo frameworku Django
+
 

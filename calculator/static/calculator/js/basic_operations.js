@@ -21,8 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         case '/': 
                                 result = num1 != 0 ? num1 / num2: "Delenie nulou nie je dovolené."; 
                                 break;
-                        default: result = " Neznáma operácia.";
+                        default: result = "Neznáma operácia.";
                 }
                 out.textContent = result;
         }); 
 });
+

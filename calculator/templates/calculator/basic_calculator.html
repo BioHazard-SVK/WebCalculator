@@ -4,22 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="{% static 'calculator/js/basic_operations.js' %}"></script>
     <title>Web Calculator</title>
+    <link rel="stylesheet" href="{% static 'calculator/css/style.css' %}"></link>
+    <script defer src="{% static 'calculator/js/basic_operations.js' %}"></script>
 </head>
 <body>
-
-    <h1>Web calculator</h1>
-    <input type="text" id="number1" size="5" />
-    <select id="operations">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    </select>
-    <input type="text" id="number2" size="5" />
-    <button id="button">Výsledok</button>
-    <h2>Výsledok: <span id="result-text">0</span></h2>
+    <h1>Webová kalkulačka</h1>
+    <div class="memory_controls">
+        <button class="memory_buttons" type="button" id="m_clean">MC</button>
+        <button class="memory_buttons" type="button" id="m_reload">MR</button>
+        <button class="memory_buttons" type="button" id="m_plus">M +</button>
+        <button class="memory_buttons" type="button" id="m_minus">M -</button>
+        <button class="memory_buttons" type="button" id="m_save">MS</button>
+    </div>
+    <div class="inputs">
+        <input type="text" id="number1" size="10" />
+        <select id="operations">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="text" id="number2" size="10" />
+    </div>
+    <button class="result_button" id="button">Výsledok</button>
+    <h2>Výsledok: <span id="result-text" class="result-text">0</span></h2>
 
 </body>
 </html>

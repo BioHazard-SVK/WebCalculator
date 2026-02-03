@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Calculator</title>
     <link rel="stylesheet" href="{% static 'calculator/css/style.css' %}"></link>
-    <script defer src="{% static 'calculator/js/basic_operations.js' %}"></script>
+    <script type="module" src="{% static 'calculator/js/app.js' %}"></script>
 </head>
 <body>
     <h1>Webová kalkulačka</h1>
@@ -27,7 +27,7 @@
         </select>
         <input type="text" id="number2" size="10" />
     </div>
-    <button class="result_button" id="button">Výsledok</button>
+    <button class="result_button" id="result_button">Výsledok</button>
     <h2>Výsledok: <span id="result-text" class="result-text">0</span></h2>
 
 </body>

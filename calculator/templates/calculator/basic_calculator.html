@@ -10,16 +10,16 @@
 </head>
 <body>
     <h1>Webová kalkulačka</h1>
-    <div class="memory_controls">
-        <button class="memory_buttons" type="button" id="m_clean">MC</button>
-        <button class="memory_buttons" type="button" id="m_reload">MR</button>
-        <button class="memory_buttons" type="button" id="m_plus">M +</button>
-        <button class="memory_buttons" type="button" id="m_minus">M -</button>
-        <button class="memory_buttons" type="button" id="m_save">MS</button>
+    <div class="memory_controls" id="memory_buttons">
+        <button class="memory_buttons" type="button"  value="m_clean">MC</button>
+        <button class="memory_buttons" type="button"  value="m_reload">MR</button>
+        <button class="memory_buttons" type="button"  value="m_plus">M +</button>
+        <button class="memory_buttons" type="button"  value="m_minus">M -</button>
+        <button class="memory_buttons" type="button"  value="m_save">MS</button>
     </div>
     <div class="inputs">
         <input type="text" id="number1" size="10" />
-        <select id="operations">
+        <select class="operations" id="operations">
             <option value="+">+</option>
             <option value="-">-</option>
             <option value="*">*</option>
@@ -29,6 +29,7 @@
     </div>
     <button class="result_button" id="result_button">Výsledok</button>
     <h2>Výsledok: <span id="result-text" class="result-text">0</span></h2>
+    <h3>Pamäť: <span id="memory-text" class="result-text">0</span></h3>
 
 </body>
 </html>

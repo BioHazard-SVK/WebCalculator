@@ -19,6 +19,13 @@ body {
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 8px;
+    
+}
+
+.memory_buttons:active {
+    transform: scale(0.95);
+    box-shadow: inset 0 1px 3px #000002;
+    transition: 0.1s;
 }
 
 .memory-controls button {
@@ -33,6 +40,12 @@ body {
 
 .memory_buttons:hover {
     background-color: #a8a8aa;
+}
+
+.operations:active {
+    transform: scale(0.99);
+    box-shadow: inset 0 1px 1px #535353;
+    transition: 0.2s;
 }
 
 .result_button {
